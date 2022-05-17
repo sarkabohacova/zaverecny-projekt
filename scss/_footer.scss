@@ -6,7 +6,7 @@
     text-align: center;
     font-size: 14px;
     background-color: root.$color-light;
-    padding: 40px;
+    padding: 60px;
 }
 
 .footer__title {
@@ -23,4 +23,9 @@
     color: root.$color-lightgrey;
     margin-top: root.$spacer;
     font-size: 12px;
+}
+
+.footer__social {
+    padding: root.$spacer;
+    max-width: 20px;
 }

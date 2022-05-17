@@ -14,18 +14,21 @@
 <body>
 
     <header class="header">
-        <div class="header__logo">
-            <img src="/images/LOGO3.svg" alt="logo Kopretiny">
-        </div>
-
+        
+        <img class="header__logo" src="/images/LOGO3.svg" alt="logo Kopretiny">
+        
         <nav class="menu">
+
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" class="menu__toggler">☰</label>
+
             <ul class="menu__list">
-                <li class="menu__item"><a href="/" class="menu__link">Domů</a></li>
-                <li class="menu__item"><a href="/aktuality/" class="menu__link">Aktuality</a></li>
-                <li class="menu__item"><a href="/kopretina/" class="menu__link">O Kopretině</a></li>
-                <li class="menu__item"><a href="/registrace/" class="menu__link">Zapiš se k nám</a></li>
-                <li class="menu__item"><a href="/faq/" class="menu__link">Časté dotazy</a></li>
-                <li class="menu__item"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
+                <li class="menu__item"><a class="menu__link" href="/" class="menu__link">Domů</a></li>
+                <li class="menu__item"><a class="menu__link" href="/aktuality/" class="menu__link">Aktuality</a></li>
+                <li class="menu__item"><a class="menu__link" href="/kopretina/" class="menu__link">O Kopretině</a></li>
+                <li class="menu__item"><a class="menu__link" href="/registrace/" class="menu__link">Zapiš se k nám</a></li>
+                <li class="menu__item"><a class="menu__link" href="/faq/" class="menu__link">Časté dotazy</a></li>
+                <li class="menu__item"><a class="menu__link" href="/kontakt/" class="menu__link">Kontakt</a></li>
             </ul>
         </nav>
     </header>
@@ -41,14 +44,13 @@
     </main>
 
     <footer class="footer">
-        {# <h3 class="footer__title">Lesní mateřská škola Kopretina</h3>
-        <p>Na louce 252<br>
-        Lesov<br>
-        30261<br>
-        </p>
-        <p><a href="mailto:kopretina@kopretina.cz">kopretina@kopretina.cz</a><br>
-        +420 712 345 678</p>
-        <p>&copy;Šárka Boháčová, Czechitas</p> #}
+        <a href="www.instagram.com" target="_blank">
+            <img class="footer__social" src="/images/instagram-brands.svg" alt="Instagram">
+        </a>
+
+        <a href="www.facebook.com" target="_blank">
+            <img class="footer__social" src="/images/facebook-f-brands.svg" alt="Facebook">
+        </a>
 
         <span class="footer__title"><strong>Lesní mateřská škola Kopretina</strong></span>
         <span class="footer__street">Na louce 252</span>

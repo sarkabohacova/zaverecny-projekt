@@ -1,0 +1,26 @@
+@use 'root';
+
+// ------- Footer --------
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    background-color: root.$color-light;
+    padding: 40px;
+}
+
+.footer__title {
+    color: root.$color-primary;
+}
+
+.footer__title::after,
+.footer__street::after,
+.footer__mail::after {
+    content: " • ";
+}
+
+.footer__copy {
+    color: root.$color-lightgrey;
+    margin-top: root.$spacer;
+    font-size: 12px;
+}

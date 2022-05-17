@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMŠ Kopretina</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans+Narrow&family=Truculenta:opsz,wght@12..72,400;12..72,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/CSS/style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">
+            <img src="/images/LOGO3.svg" alt="logo Kopretiny">
+        </div>
+
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="/" class="menu__link">Domů</a></li>
+                <li class="menu__item"><a href="/aktuality/" class="menu__link">Aktuality</a></li>
+                <li class="menu__item"><a href="/kopretina/" class="menu__link">O Kopretině</a></li>
+                <li class="menu__item"><a href="/registrace/" class="menu__link">Zapiš se k nám</a></li>
+                <li class="menu__item"><a href="/faq/" class="menu__link">Časté dotazy</a></li>
+                <li class="menu__item"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1 class="hero__title">Lesní mateřská škola Kopretina</h1>
+    </section>
+
+    <main class="main">
+
+        {{ content | safe }}
+
+    </main>
+
+    <footer class="footer">
+        {# <h3 class="footer__title">Lesní mateřská škola Kopretina</h3>
+        <p>Na louce 252<br>
+        Lesov<br>
+        30261<br>
+        </p>
+        <p><a href="mailto:kopretina@kopretina.cz">kopretina@kopretina.cz</a><br>
+        +420 712 345 678</p>
+        <p>&copy;Šárka Boháčová, Czechitas</p> #}
+
+        <span class="footer__title"><strong>Lesní mateřská škola Kopretina</strong></span>
+        <span class="footer__street">Na louce 252</span>
+        <span class="footer__town">Lesov, 30261</span><br>
+        <span class="footer__mail"><a href="mailto:kopretina@kopretina.cz">kopretina@kopretina.cz</a></span>
+        <span class="footer__phone">+420 712 345 678</span><br>
+        <p class="footer__copy">&copy; Šárka Boháčová, Czechitas</p>
+
+    </footer>
+
+</body>
+</html>

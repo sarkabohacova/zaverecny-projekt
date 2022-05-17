@@ -1,0 +1,24 @@
+@use 'root';
+
+// ------- Hero --------
+
+.hero {
+    background-image: url(/images/hero.jpg);
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    min-height: 500px;
+    position: relative;
+}
+
+.hero__title {
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+	font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1.25;
+    color: root.$color-light;
+    text-shadow: 1px 1px 1px #262722;
+}

@@ -1,0 +1,80 @@
+@use 'root';
+
+// ------- Infoboxes --------
+
+.infoboxes__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: root.$spacer;
+    }
+}
+
+.infobox {
+    background-color: root.$color-light;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 5px 10px 18px root.$color-lightgrey;
+}
+
+.infobox__img {
+    border-radius: 5px 5px 0px 0px;
+}
+
+.infobox__text {
+    padding: 0 20px 20px 20px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.infobox__title {
+    margin-bottom: 0;
+}
+
+
+// ------- Gallery --------
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gallery__item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item:nth-child(3n) {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    @media screen and (min-width: 960px) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+.gallery__item:nth-child(9) {
+    display: none;
+
+    @media screen and (min-width: 960px) {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .gallery__item:nth-child(4n) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+

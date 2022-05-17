@@ -1,0 +1,55 @@
+@use 'root';
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+// ------- General --------
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #262722;
+    background-color: whitesmoke;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: root.$font-special;
+    font-weight: 700;
+    color: root.$color-primary;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+
+img {
+    width: 100%;
+}
+
+section {
+    margin: 40px 0;
+}
+
+
+// .header,
+// .infoboxes,
+// .gallery,
+// .footer {
+//     max-width: 1140px;
+//     margin: 0 auto;
+// }
+
+.header,
+.infoboxes,
+.gallery,
+.regist_wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+// .faq__img {
+//     width: 350px;
+//     float: right;
+// }

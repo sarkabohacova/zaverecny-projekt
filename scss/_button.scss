@@ -1,0 +1,18 @@
+@use 'root';
+
+// ------- Button --------
+
+.button {
+    padding: 10px 15px;
+    background-color: root.$color-primary;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 5px 10px root.$color-lightgrey;
+}
+
+.button--hover:hover {
+    background-color: root.$color-accent;
+}

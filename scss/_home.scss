@@ -19,6 +19,13 @@
     text-align: center;
     padding-bottom: 20px;
     box-shadow: 5px 10px 18px root.$color-lightgrey;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.infobox:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
 }
 
 .infobox__img {
@@ -34,6 +41,8 @@
 .infobox__title {
     margin-bottom: 0;
 }
+
+
 
 
 // ------- Gallery --------

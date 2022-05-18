@@ -7,7 +7,7 @@
 }
 
 .header__logo {
-    max-width: 30%;
+    max-width: 20%;
     padding: 20px 0;
 }
 
@@ -53,8 +53,8 @@
 	color: root.$color-primary;
 }
 
-.menu__link:hover {
-	background-color: root.$color-accent;
+.menu__link:active {
+	color: root.$color-accent;
 }
 
 .menu__checkbox:checked ~ .menu__list {

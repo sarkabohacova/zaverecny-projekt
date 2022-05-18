@@ -56,7 +56,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 500px;
+  min-height: calc(100vh - 155px);
   position: relative;
 }
 
@@ -94,7 +94,7 @@ img {
 }
 
 .header__logo {
-  max-width: 30%;
+  max-width: 20%;
   padding: 20px 0;
 }
 
@@ -138,8 +138,8 @@ img {
   color: #52573d;
 }
 
-.menu__link:hover {
-  background-color: #b27c41;
+.menu__link:active {
+  color: #b27c41;
 }
 
 .menu__checkbox:checked ~ .menu__list {
@@ -188,6 +188,13 @@ img {
   text-align: center;
   padding-bottom: 20px;
   box-shadow: 5px 10px 18px #c1c2bb;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.infobox:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
 }
 
 .infobox__img {
@@ -258,7 +265,6 @@ img {
   color: #52573d;
 }
 
-.footer__title::after,
 .footer__street::after,
 .footer__mail::after {
   content: " • ";
@@ -270,9 +276,18 @@ img {
   font-size: 12px;
 }
 
-.footer__social {
-  padding: 20px;
-  max-width: 20px;
+.fa-facebook-f,
+.fa-instagram {
+  color: #52573d;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.fa-facebook-f:hover,
+.fa-instagram:hover {
+  opacity: 0.7;
 }
 
 .regist_wrapper {

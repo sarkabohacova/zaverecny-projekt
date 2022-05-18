@@ -13,7 +13,6 @@
     color: root.$color-primary;
 }
 
-.footer__title::after,
 .footer__street::after,
 .footer__mail::after {
     content: " • ";
@@ -25,7 +24,16 @@
     font-size: 12px;
 }
 
-.footer__social {
-    padding: root.$spacer;
-    max-width: 20px;
+.fa-facebook-f,
+.fa-instagram {
+    color: root.$color-primary;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.fa-facebook-f:hover,
+.fa-instagram:hover {
+    opacity: 0.7;
 }

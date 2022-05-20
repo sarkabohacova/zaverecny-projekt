@@ -29,8 +29,10 @@ img {
 }
 
 .infoboxes,
-.gallery {
-    margin: 40px 0;
+.gallery,
+.faq,
+.contact {
+    margin: 60px 0;
 }
 
 
@@ -45,7 +47,9 @@ img {
 .header,
 .infoboxes,
 .gallery,
-.regist_wrapper {
+.regist_wrapper,
+.faq,
+.contact {
     margin-left: 40px;
     margin-right: 40px;
 }

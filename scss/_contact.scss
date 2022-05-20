@@ -1,0 +1,12 @@
+@use 'root';
+
+.contact__flex {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.contact__title {
+    margin: 0;
+    padding: 0;
+}

@@ -11,6 +11,10 @@
     padding: 20px 0;
 }
 
+.header__logo-home {
+	width: 100%;
+}
+
 
 // ------- Menu --------
 
@@ -61,6 +65,7 @@
 	display: block;
     z-index: 2;
 }
+
 
 @media screen and (min-width: 960px) {
 	

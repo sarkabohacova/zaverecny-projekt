@@ -1,0 +1,19 @@
+@use 'root';
+
+// Text with a daisy icon
+
+.daisybox {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: root.$spacer;
+}
+
+.daisybox__icon {
+    fill: #AF7D08;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.daisybox__text {
+    margin: 0;
+}

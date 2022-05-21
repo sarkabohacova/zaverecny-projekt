@@ -1,0 +1,21 @@
+@use 'root';
+
+// Our team
+
+.team__block {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.block__title {
+    margin: 5px 0 0 0;
+}
+
+.block__role {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.team__title {
+    margin-bottom: 0;
+}

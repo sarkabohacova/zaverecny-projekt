@@ -7,8 +7,12 @@
 }
 
 .header__logo {
-    max-width: 20%;
+    max-width: 150px;
     padding: 20px 0;
+
+	@media screen and (min-width: 960px) {
+		max-width: 200px;
+	}
 }
 
 .header__logo-home {

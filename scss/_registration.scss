@@ -87,15 +87,14 @@
 .block__table {
     text-align: left;
     table-layout: fixed;
-    border-collapse: collapse;
+    border-spacing: 0px;
     margin: 20px auto;
 }
 
-th,
-td {
+.th,
+.td {
     padding: 10px;
     border-bottom: 1px solid root.$color-accent;
-    
 }
 
 th {

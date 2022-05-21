@@ -12,7 +12,7 @@ body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   color: #262722;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   line-height: 1.5;
 }
 
@@ -23,11 +23,12 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 h3 {
@@ -38,10 +39,16 @@ img {
   width: 100%;
 }
 
+a {
+  color: #553a41;
+}
+
 .infoboxes,
 .gallery,
 .faq,
-.contact {
+.contact,
+.about,
+.team {
   margin: 60px 0;
 }
 
@@ -50,30 +57,66 @@ img {
 .gallery,
 .regist_wrapper,
 .faq,
-.contact {
+.contact,
+.about,
+.team {
   margin-left: 40px;
   margin-right: 40px;
 }
 
 .hero {
-  background-image: url(/images/hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(62, 60, 53, 0.3), rgba(33, 31, 24, 0.4)), url(/images/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 155px);
+  min-height: calc(100vh - 100px);
   position: relative;
 }
 
-.hero__title {
+.hero__content {
   position: absolute;
-  bottom: 20px;
-  right: 80px;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  bottom: 40px;
+  right: 0;
+  margin: 30px;
+  text-align: right;
+}
+
+.hero__title {
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #eaa80b;
+  background-color: #f3eddf;
+  margin: 0 0 10px 0;
+  padding: 5px 10px;
+  opacity: 0.8;
+}
+@media screen and (min-width: 960px) {
+  .hero__title {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__motto {
+  display: inline-block;
+  margin: 0;
+  font-size: 1rem;
   line-height: 1.25;
-  color: #f3eddf;
-  text-shadow: 1px 1px 1px #262722;
+  font-weight: 400;
+  letter-spacing: 1;
+  color: #52573d;
+  background-color: #f3eddf;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  opacity: 0.8;
+}
+@media screen and (min-width: 960px) {
+  .hero__motto {
+    font-size: 1.2rem;
+  }
 }
 
 .button {
@@ -88,7 +131,7 @@ img {
 }
 
 .button--hover:hover {
-  background-color: #b27c41;
+  background-color: #eaa80b;
 }
 
 .header {
@@ -98,8 +141,13 @@ img {
 }
 
 .header__logo {
-  max-width: 20%;
+  max-width: 150px;
   padding: 20px 0;
+}
+@media screen and (min-width: 960px) {
+  .header__logo {
+    max-width: 200px;
+  }
 }
 
 .header__logo-home {
@@ -147,7 +195,7 @@ img {
 }
 
 .menu__link:active {
-  color: #b27c41;
+  color: #eaa80b;
 }
 
 .menu__checkbox:checked ~ .menu__list {
@@ -312,7 +360,7 @@ img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: 2px dotted #b27c41;
+  border: 2px dotted #eaa80b;
   padding: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -331,18 +379,18 @@ img {
 .block__table {
   text-align: left;
   table-layout: fixed;
-  border-collapse: collapse;
+  border-spacing: 0px;
   margin: 20px auto;
 }
 
-th,
-td {
+.th,
+.td {
   padding: 10px;
-  border-bottom: 1px solid #b27c41;
+  border-bottom: 1px solid #eaa80b;
 }
 
 th {
-  background-color: #b27c41;
+  background-color: #eaa80b;
 }
 
 .faq {
@@ -423,4 +471,53 @@ th {
 .contact__title {
   margin: 0;
   padding: 0;
+}
+
+.program__table {
+  border-spacing: 0px;
+}
+
+.table__time {
+  width: 150px;
+  font-weight: bold;
+}
+
+.table__time,
+.table__item {
+  padding: 10px;
+  border-bottom: 1px solid #eaa80b;
+}
+
+.daisybox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.daisybox__icon {
+  fill: #AF7D08;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.daisybox__text {
+  margin: 0;
+}
+
+.team__block {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.block__title {
+  margin: 5px 0 0 0;
+}
+
+.block__role {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.team__title {
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

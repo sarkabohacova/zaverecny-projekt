@@ -1,0 +1,22 @@
+@use 'root';
+
+.program__table {
+    border-spacing: 0px;
+}
+
+.table__time {
+    width: 150px;
+    font-weight: bold;
+}
+
+.table__time,
+.table__item {
+    padding: 10px;
+    border-bottom: 1px solid root.$color-accent;
+}
+
+
+
+
+
+

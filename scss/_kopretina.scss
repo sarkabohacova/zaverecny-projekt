@@ -1,6 +1,12 @@
 @use 'root';
 
-.program__table {
+.box {
+    margin-top: 40px;
+}
+
+// Table with daily program
+
+.box__table {
     border-spacing: 0px;
 }
 
@@ -14,6 +20,27 @@
     padding: 10px;
     border-bottom: 1px solid root.$color-accent;
 }
+
+// Pictures
+
+.box__img {
+    border-radius: 15px;
+    border: 2px dotted root.$color-accent;
+    padding: 5px;
+    height: 100%;
+    max-width: 280px;
+    object-fit: cover;
+}
+
+.box__pic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(50px, 180px);
+    gap: 2%;
+}
+
+
+
 
 
 

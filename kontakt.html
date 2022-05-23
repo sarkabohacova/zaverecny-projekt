@@ -3,50 +3,59 @@ layout: layouts/main.njk
 title: Kontakt
 ---
 
-<section class="contact">
-    <h1 class="contact__heading">Nenašli jste na stránkách, co jste hledali?</h1>
-    <h1 class="contact__heading">Chcete se s námi spojit?</h1>
-
-    <div class="contact__flex">
-        <div class="contact__flex-left">
-            <i class="fa-solid fa-location-pin"></i>
-        </div>
-        <div class="contact__flex-right">
-            <h3 class="contact__title">Najdete nás tady</h3>
-            <p class="contact__adress">
-                <strong>Lesní mateřská škola Kopretina</strong><br>
-                Na louce 252<br>
-                30261 Rejštejn
-            </p>
-        </div>
+<section class="hero" style="background-image: linear-gradient(to bottom, rgba(62, 60, 53, 0.3), rgba(33, 31, 24, 0.4)), url(/images/daisies3.jpg);">
+    <div class="hero__content">
+            <h1 class="hero__title">Kontakt</h1><br>
+            <h2 class="hero__motto">Pomáháme dětem růst</h2>
     </div>
+</section>
 
-    <div class="contact__flex">
-        <div class="contact__flex-left">
-            <i class="fa-solid fa-phone"></i>
+<main class="main">
+
+    <section class="contact">
+        <h1 class="contact__heading">Kontakt</h1>
+
+        <div class="daisybox">
+            <img class="daisybox__icon" src="/images/daisy_yellow.svg" alt="Daisy icon">
+
+            <div class="daisybox__info">
+                <h2 class="daisybox__title">Najdete nás tady</h2>
+                <p class="daisybox__text">
+                    <strong>Lesní mateřská škola Kopretina</strong><br>
+                    Na louce 252<br>
+                    30261 Rejštejn
+                </p>
+            </div>
         </div>
-        <div class="contact__flex-right">
-            <h3 class="contact__title">Kontaktujte nás</h3>
-                <p class="contact__number">
+
+        <div class="daisybox">
+            <img class="daisybox__icon" src="/images/daisy_yellow.svg" alt="Daisy icon">
+
+            <div class="daisybox__info">
+                <h2 class="daisybox__title">Kontaktujte nás</h2>
+                <p class="daisybox__text">
                     +420 712 345 678<br>
                     <a href="mailto:kopretina@kopretina.cz">kopretina@kopretina.cz</a>
                 </p>
+            </div>
         </div>
-    </div>
 
-    <div class="contact__flex">
-        <div class="contact__flex-left">
-            <i class="fa-solid fa-heart"></i>
+        <div class="daisybox">
+            <img class="daisybox__icon" src="/images/daisy_yellow.svg" alt="Daisy icon">
+
+            <div class="daisybox__info">
+                <h2 class="daisybox__title">Sledujte nás na sociálních sítích</h2>
+                <p class="daisybox__text">
+                    <a href="www.facebook.com" target="_blank" class="fa-brands fa-facebook-f"></a>
+                    <a href="www.instagram.com" target="_blank" class="fa-brands fa-instagram"></a>
+                </p>
+            </div>
         </div>
-        <div class="contact__flex-right">
-            <h3 class="contact__title">Sledujte nás na sociálních sítích</h3>
-                
-                <a href="www.facebook.com" target="_blank" class="fa-brands fa-facebook-f"></a>
-                <a href="www.instagram.com" target="_blank" class="fa-brands fa-instagram"></a><br>
+
+        <div class="map-responsive">
+            <iframe style="border:none" src="https://frame.mapy.cz/s/fetolezufa" width="700" height="466" frameborder="0"></iframe>
         </div>
-    </div>
+        
+    </section>
 
-    <iframe style="border:none" src="https://frame.mapy.cz/s/fetolezufa" width="700" height="466" frameborder="0"></iframe>
-
-    
-</section>
+</main>

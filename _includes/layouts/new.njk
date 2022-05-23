@@ -1,0 +1,30 @@
+---
+layout: layouts/main.njk
+title: Aktuality
+---
+
+<section class="hero" style="background-image: linear-gradient(to bottom, rgba(62, 60, 53, 0.3), rgba(33, 31, 24, 0.4)), url(/images/hero_act.jpg);">
+    <div class="hero__content">
+            <h1 class="hero__title">Aktuality</h1><br>
+            <h2 class="hero__motto">Pomáháme dětem růst</h2>
+    </div>
+</section>
+
+<main class="main">
+
+    <article class="news">
+
+        <h1 class="news__title">{{ title }}</h1>
+
+        <p class="news__meta">Zveřejněno {{ page.date.toLocaleString('cs-CZ') }}</p>
+
+        <div class="news__content">
+
+            {{ content | safe }}
+        
+        </div>
+
+        <img class="news__img" src="/images/{{ photo }}" alt="{{ alt }}">
+
+    </article>
+</main>¨

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LMŠ Kopretina</title>
+    <title>{{ title }}</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
     
@@ -35,19 +35,8 @@
             </ul>
         </nav>
     </header>
-    
-    <section class="hero">
-        <div class="hero__content">
-                <h1 class="hero__title">Lesní mateřská škola Kopretina</h1><br>
-                <h2 class="hero__motto">Pomáháme dětem růst</h2>
-        </div>
-    </section>
 
-    <main class="main">
-
-        {{ content | safe }}
-
-    </main>
+    {{ content | safe }}
 
     <footer class="footer">
         <a href="www.facebook.com" target="_blank" class="fa-brands fa-facebook-f"></a>

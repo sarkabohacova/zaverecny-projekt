@@ -1,12 +1,31 @@
 @use 'root';
 
+.contact__heading {
+    text-transform: uppercase;
+}
+
 .contact__flex {
     display: flex;
     justify-content: space-between;
     width: 40%;
 }
 
-.contact__title {
-    margin: 0;
+.daisybox__title {
+    margin: 0 0 10px 0;
     padding: 0;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }

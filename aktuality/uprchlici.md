@@ -1,7 +1,7 @@
 ---
 layout: layouts/new.njk
 title: Refugees welcome
-date: 2022-02-30T11:26
+date: 2022-03-08T16:05
 photo: ukraine.jpg
 alt: Refugees
 ---

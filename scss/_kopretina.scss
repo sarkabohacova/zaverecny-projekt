@@ -4,6 +4,12 @@
     margin-top: 40px;
 }
 
+.box__title,
+.box__text,
+.box__pic {
+    text-align: center;
+}
+
 // Table with daily program
 
 .box__table {
@@ -28,16 +34,10 @@
     border: 2px dotted root.$color-accent;
     padding: 5px;
     height: 100%;
-    max-width: 280px;
+    max-width: 600px;
     object-fit: cover;
 }
 
-.box__pic {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(50px, 180px);
-    gap: 2%;
-}
 
 
 

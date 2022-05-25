@@ -4,7 +4,7 @@
 
 .infoboxes__grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     gap: 40px;
 
     @media screen and (min-width: 960px) {
@@ -21,6 +21,8 @@
     box-shadow: 5px 10px 18px root.$color-lightgrey;
     cursor: pointer;
     transition: transform .3s;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .infobox:hover {
@@ -45,6 +47,10 @@
 
 
 // ------- Gallery --------
+
+.gallery__title {
+    text-align: center;
+}
 
 .gallery__grid {
     display: grid;

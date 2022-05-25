@@ -12,32 +12,41 @@ title: Aktuality
 
 <main class="main">
 
+    <div class="content">
+
     <section class="newslist">
 
-        <h1 class="newslist__title">Co se děje v Kopretině</h1>
-    
-        <p class="newslist__disclaimer">
-            Zde naleznete přehled nejdůležitějších aktualit v Kopretině (pozvánky na akce, brigády, stěžejní události, případně volná pracovní místa).
-        </p>
-    
-        <p class="newslist__disclaimer">
-            Fotografie a zprávy z běžného dění ve školce sledujte na našich sociálních sítích.<br>
-            <a href="www.facebook.com" target="_blank" class="fa-brands fa-facebook-f"></a>
-            <a href="www.instagram.com" target="_blank" class="fa-brands fa-instagram"></a>
-        </p>
-
-        <img class="newslist__img" src="/images/fairyhouse.jpg" alt="Treehouse building">
-    
-        {% for post in collections.news | reverse %}
-            
-            <div class="newslist__item">
-                <h2 class="newslist__heading"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
-                <p class="newslist__date">{{ post.data.date }}</p>
-            </div>
+        <div class="newslist-left">
+            <h1 class="newslist__title">Co se děje v Kopretině</h1>
         
-        {% endfor %}
+            <p class="newslist__disclaimer">
+                Zde naleznete přehled nejdůležitějších aktualit v Kopretině (pozvánky na akce, brigády, stěžejní události, případně volná pracovní místa).
+            </p>
+        
+            <p class="newslist__disclaimer">
+                Fotografie a zprávy z běžného dění ve školce sledujte na našich sociálních sítích.<br>
+                <a href="www.facebook.com" target="_blank" class="fa-brands fa-facebook-f"></a>
+                <a href="www.instagram.com" target="_blank" class="fa-brands fa-instagram"></a>
+            </p>
+        </div>
 
-
+        <div class="newslist-right">
+            <img class="newslist__img" src="/images/spiral.jpg" alt="Spiral building">
+        </div>
+        
+        <div class="newslist__grid">
+            {% for post in collections.news | reverse %}
+                
+                <div class="newslist__item">
+                    <h2 class="newslist__heading"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+                    <p class="newslist__date">{{ post.data.date }}</p>
+                </div>
+            
+            {% endfor %}
+        </div>
+        
     </section>
-    
+
+    </div>
+
 </main>

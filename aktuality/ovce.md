@@ -2,7 +2,7 @@
 layout: layouts/new.njk
 title: Nový páreček valašských ovcí
 date: 2021-09-13T14:16
-photo: sheeps.jpg
+photo: sheep.jpg
 alt: Sheep
 tags: news
 ---

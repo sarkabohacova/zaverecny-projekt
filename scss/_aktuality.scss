@@ -4,6 +4,12 @@
 
 .news {
     text-align: center;
+
+    @media screen and (min-width: 960px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
 }
 
 .news__img {
@@ -14,6 +20,10 @@
     max-width: 600px;
     object-fit: cover;
     margin-top: 30px;
+
+    @media screen and (min-width: 960px) {
+        height: 80%;
+    }
 }
 
 .news__meta {
@@ -28,6 +38,10 @@
     font-size: 1.5em;
     padding: 10px;
     cursor: pointer;
+
+    @media screen and (min-width: 960px) {
+        padding: 0;
+    }
 }
 
 .fa-arrow-left-long:hover {
@@ -39,17 +53,19 @@
 
 .newslist {
     text-align: center;
-}
 
+}
 
 .newslist__heading {
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .newslist__date {
     text-transform: uppercase;
     color: root.$color-accent;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .newslist__item {
@@ -59,6 +75,15 @@
     max-width: 500px;
     cursor: pointer;
     margin: 0 auto;
+    padding: 20px;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        max-width: none;
+    }
 }
 
 .newslist__item:hover {
@@ -70,6 +95,19 @@
     border: 2px dotted root.$color-accent;
     padding: 5px;
     height: 100%;
-    max-width: 280px;
+    max-width: 300px;
     object-fit: cover;
+
+    @media screen and (min-width: 960px) {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .newslist {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: root.$spacer;
+    }
+
 }

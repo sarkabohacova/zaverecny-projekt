@@ -12,21 +12,31 @@ title: Aktuality
 
 <main class="main">
 
+    <div class="content">
+
     <article class="news">
 
-        <h1 class="news__title">{{ title }}</h1>
+        <div class="news__left">
 
-        <p class="news__meta">Zveřejněno {{ page.date.toLocaleString('cs-CZ') }}</p>
+            <h1 class="news__title">{{ title }}</h1>
+            <p class="news__meta">Zveřejněno {{ page.date.toLocaleString('cs-CZ') }}</p>
+            <div class="news__content">
 
-        <div class="news__content">
+                {{ content | safe }}
+            
+            </div>
 
-            {{ content | safe }}
-        
         </div>
 
-        <img class="news__img" src="/images/{{ photo }}" alt="{{ alt }}">
+        <div class="news__right">
+            <img class="news__img" src="/images/{{ photo }}" alt="{{ alt }}">
+        </div>
 
         <a href="/aktuality/" class="fa-solid fa-arrow-left-long"></a>
+        
 
     </article>
+
+    </div>
+
 </main>

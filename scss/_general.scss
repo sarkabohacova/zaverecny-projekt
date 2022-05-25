@@ -44,14 +44,6 @@ a {
 }
 
 
-// .header,
-// .infoboxes,
-// .gallery,
-// .footer {
-//     max-width: 1140px;
-//     margin: 0 auto;
-// }
-
 .header,
 .infoboxes,
 .gallery,
@@ -66,7 +58,10 @@ a {
     margin-right: 40px;
 }
 
-// .faq__img {
-//     width: 350px;
-//     float: right;
-// }
+@media screen and (min-width: 960px) {
+    .content {
+        max-width: 1120px;
+        margin: 0 auto;
+    }
+}
+

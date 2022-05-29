@@ -8,10 +8,18 @@
 
 .team__block {
     margin: 40px 0;
+
+    @media screen and (min-width: 960px) {
+        margin: 0 40px 0 0;
+    }
 }
 
 .team-block__title {
     margin: 5px 0 0 0;
+}
+
+.team-block__title:before {
+    display: none;
 }
 
 .team-block__role {
@@ -21,6 +29,10 @@
 
 .team__title {
     margin-bottom: 0;
+
+    @media screen and (min-width: 960px) {
+        margin-bottom: 40px;
+    }
 }
 
 .team-block__img {
@@ -30,9 +42,14 @@
     border: 2px dotted root.$color-accent;
     padding: 10px;
     object-fit: cover;
+}
 
-    @media screen and (min-width: 960px) {
-        width: 400px;
-        height: 400px;
+@media screen and (min-width: 1060px) {
+    
+    .team__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-bottom: 60px;
     }
 }

@@ -4,6 +4,7 @@
 
 .news {
     text-align: center;
+    margin-bottom: 60px;
 
     @media screen and (min-width: 960px) {
         display: grid;
@@ -53,12 +54,19 @@
 
 .newslist {
     text-align: center;
-
 }
 
 .newslist__heading {
     margin-bottom: 0;
     margin-top: 0;
+
+    @media screen and (min-width: 960px) {
+        text-align: left;
+    }
+}
+
+.newslist__heading:before {
+    display: none;
 }
 
 .newslist__date {
@@ -66,6 +74,10 @@
     color: root.$color-accent;
     margin-top: 0;
     margin-bottom: 0;
+
+    @media screen and (min-width: 960px) {
+        text-align: right;
+    }
 }
 
 .newslist__item {
@@ -79,10 +91,8 @@
 
     @media screen and (min-width: 960px) {
         grid-template-columns: 2fr 1fr;
-        align-items: center;
-        justify-content: center;
         gap: 60px;
-        max-width: none;
+        max-width: 1120px;
     }
 }
 
@@ -108,6 +118,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: root.$spacer;
+    }
+
+    .newslist__grid {
+        grid-column: span 2;
+        margin-top: 40px;
     }
 
 }

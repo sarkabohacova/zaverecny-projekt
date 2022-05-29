@@ -40,6 +40,11 @@
     }
 }
 
+.hero__title:before,
+.hero__motto:before {
+    display: none;
+}
+
 .hero__motto {
     display: inline-block;
     margin: 0;

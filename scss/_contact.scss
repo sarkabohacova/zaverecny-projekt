@@ -30,3 +30,9 @@
     width: 100%;
     position: absolute;
 }
+
+@media screen and (min-width: 960px) {
+    .contact {
+        margin-bottom: 60px;
+    }
+}

@@ -24,6 +24,25 @@ h1 { font-size: 2.2rem; margin-bottom: root.$spacer }
 h2 { font-size: 1.8rem; }
 h3 { font-size: 1.2rem; }
 
+h1,
+h2 {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+h1:before,
+h2:before {
+    content: '';
+    width: 45%;
+    height: 2px;
+    background-color: #DADECF;
+    left: -8%;
+    bottom: 10%;
+    position: absolute;
+    z-index: -1;
+}
+
 img {
     width: 100%;
 }
@@ -38,16 +57,21 @@ a {
 .contact,
 .about,
 .team,
-.newslist,
-.news {
+.newslist {
     margin: 60px 0;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 
-.header,
+.header {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
 .infoboxes,
 .gallery,
-.regist_wrapper,
+.regist__wrapper,
 .faq,
 .contact,
 .about,
@@ -56,10 +80,21 @@ a {
 .news {
     margin-left: 40px;
     margin-right: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @media screen and (min-width: 960px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media screen and (min-width: 960px) {
-    .content {
+    .content,
+    .team,
+    .regist__wrapper,
+    .faq,
+    .contact {
         max-width: 1120px;
         margin: 0 auto;
     }

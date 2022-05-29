@@ -1,5 +1,7 @@
 @use 'root';
 
+// General
+
 .box {
     margin-top: 40px;
 }
@@ -9,6 +11,11 @@
 .box__pic {
     text-align: center;
 }
+
+// .box--background {
+//     background-color: root.$color-light;
+//     padding: 60px 0;
+// }
 
 // Table with daily program
 
@@ -36,6 +43,33 @@
     height: 100%;
     max-width: 600px;
     object-fit: cover;
+}
+
+// Media query
+
+@media screen and (min-width: 960px) {
+    .daisybox__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: root.$spacer;
+    }
+
+    .box__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 40px;
+    }
+
+    .box__info--reverse {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .box__pic--reverse {
+        grid-column: 2 / 3;
+    }
+
 }
 
 

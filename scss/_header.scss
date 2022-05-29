@@ -31,11 +31,20 @@
     @media screen and (max-width: 500px) {
         font-size: 1.2rem;
     }
+
+	@media screen and (min-width: 960px) {
+		display: none;
+	}
 }
 
 .menu__checkbox {
 	position: absolute;
 	left: -9999px;
+}
+
+.menu__checkbox:checked ~ .menu__list {
+	display: block;
+    z-index: 2;
 }
 
 .menu__list {
@@ -48,52 +57,73 @@
     position: absolute;
     right: 0;
     z-index: 2;
+	// width: 50vh;
+
+	@media screen and (min-width: 960px) {
+		display: flex !important;
+        background-color: white;
+	}
 }
 
 .menu__item {
 	border-bottom: 1px solid root.$color-primary;
+	padding: 15px;
+
+	@media screen and (min-width: 960px) {
+		border-bottom: none;
+	}
 }
 
 .menu__link {
 	display: block;
-	padding: 15px;
 	text-decoration: none;
 	color: root.$color-primary;
+
+	@media screen and (min-width: 960px) {
+		position: relative;
+	}
+	
 }
 
-.menu__link:active {
+.menu__link,
+.menu__link:after {
+	transition: all .5s;
+}
+
+.menu__link:hover {
 	color: root.$color-accent;
 }
 
-.menu__checkbox:checked ~ .menu__list {
-	display: block;
-    z-index: 2;
-}
+
 
 
 @media screen and (min-width: 960px) {
-	
-	.menu__toggler {
-		display: none;
+
+	.menu__link:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 0%;
+		content: '.';
+		color: transparent;
+		background: root.$color-accent;
+		height: 1px;
+	}
+	  
+	.menu__link:hover:after {
+		width: 100%;
 	}
 
-	.menu__list {
-		display: flex !important;
-        background-color: white;
+	.menu__link {
+		  padding-bottom: 5px;
 	}
 
-	.menu__item {
-		border-right: 1px solid root.$color-lightgrey;
-		border-bottom: none;
+	.menu__link:hover {
+		color: root.$color-primary;
 	}
 
-    .menu__item:last-child {
-        border-right: none;
-    }
-
-    .menu__link {
-        color: root.$color-primary;
-    }
 }
 
 // .menu__list {

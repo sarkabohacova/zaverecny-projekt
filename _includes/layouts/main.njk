@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="/CSS/style.css">
 
+    <link rel="stylesheet" href="/CSS/glide.core.css">
+
+    <link rel="stylesheet" href="/CSS/glide.theme.css">
+
 </head>
 <body>
 
@@ -52,6 +56,15 @@
         <p class="footer__copy">&copy; Šárka Boháčová, Czechitas</p>
 
     </footer>
+
+    <script src="/js/glide.min.js"></script>
+
+    <script>
+    new Glide('.glide', {
+        autoplay: 2000,
+        type: 'carousel',
+    }).mount()
+    </script>
 
     <script src="/js/fslightbox.js"></script>
 

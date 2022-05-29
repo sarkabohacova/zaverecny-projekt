@@ -3,7 +3,9 @@
 // General
 
 .box {
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
 .box__title,
@@ -12,10 +14,10 @@
     text-align: center;
 }
 
-// .box--background {
-//     background-color: root.$color-light;
-//     padding: 60px 0;
-// }
+.philosophy {
+    margin-bottom: 60px;
+    text-align: center;
+}
 
 // Table with daily program
 

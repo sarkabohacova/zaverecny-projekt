@@ -49,7 +49,7 @@ h2:before {
   height: 2px;
   background-color: #DADECF;
   left: -8%;
-  bottom: 10%;
+  bottom: -1%;
   position: absolute;
   z-index: -1;
 }
@@ -68,7 +68,8 @@ a {
 .contact,
 .about,
 .team,
-.newslist {
+.newslist,
+.references {
   margin: 60px 0;
   padding-left: 40px;
   padding-right: 40px;
@@ -87,7 +88,8 @@ a {
 .about,
 .team,
 .newslist,
-.news {
+.news,
+.references {
   margin-left: 40px;
   margin-right: 40px;
   padding-left: 40px;
@@ -102,19 +104,16 @@ a {
 .about,
 .team,
 .newslist,
-.news {
+.news,
+.references {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .content,
-.team,
-.regist__wrapper,
-.faq,
-.contact {
-    max-width: 1120px;
+  .main {
+    max-width: 1300px;
     margin: 0 auto;
   }
 }
@@ -327,16 +326,14 @@ a {
     color: #52573d;
   }
 }
-.infoboxes {
-  position: relative;
-  margin-bottom: 0;
-}
-
 .divider {
-  position: absolute;
-  width: 20%;
-  left: 40%;
-  margin: 30px 0;
+  width: 100px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 960px) {
+  .divider {
+    width: 150px;
+  }
 }
 
 .infoboxes__grid {
@@ -383,12 +380,16 @@ a {
 
 .references {
   text-align: center;
-  background-color: #f3eddf;
-  height: 400px;
-  padding-top: 20px;
+  background-image: linear-gradient(to bottom, rgba(173, 173, 173, 0.8), rgba(172, 172, 172, 0.9)), url(/images/daisies4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  padding: 20px;
   box-shadow: 5px 10px 18px #c1c2bb;
   border-radius: 5px;
-  margin-top: 120px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .references__title {
@@ -399,13 +400,14 @@ a {
   background-color: white;
   border: 1px solid #eaa80b;
   padding: 10px;
-  max-width: 600px;
+  max-width: 70vh;
   text-align: center;
   margin: 0 auto;
 }
 
 .gallery {
   text-align: center;
+  margin-top: 60px;
 }
 
 .gallery__grid {
@@ -434,6 +436,10 @@ a {
     grid-column: span 1;
     grid-row: span 1;
   }
+}
+
+.gallery__title {
+  margin-top: 0px;
 }
 
 .gallery__item:nth-child(9) {
@@ -487,8 +493,14 @@ a {
   opacity: 0.7;
 }
 
+.divider--footer {
+  margin-top: 20px;
+  width: 100px;
+}
+
 .block {
   text-align: center;
+  margin-top: 60px;
   margin-bottom: 60px;
   padding: 0 20px;
 }
@@ -498,6 +510,8 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 40px;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -509,18 +523,22 @@ a {
   border-radius: 15px;
   border: 2px dotted #eaa80b;
   padding: 5px;
-  height: 100%;
+  max-height: 700px;
   max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .block__text {
+  text-align: center;
+}
+
+.block--list {
   text-align: justify;
 }
 
 .block__table {
-  text-align: left;
+  text-align: center;
   table-layout: fixed;
   border-spacing: 0px;
   margin: 20px auto;
@@ -657,12 +675,19 @@ th {
   }
 }
 .box {
-  margin-top: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .box__title,
 .box__text,
 .box__pic {
+  text-align: center;
+}
+
+.philosophy {
+  margin-bottom: 60px;
   text-align: center;
 }
 
@@ -746,7 +771,7 @@ th {
 .team__block {
   margin: 40px 0;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1060px) {
   .team__block {
     margin: 0 40px 0 0;
   }
@@ -768,7 +793,7 @@ th {
 .team__title {
   margin-bottom: 0;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1060px) {
   .team__title {
     margin-bottom: 40px;
   }
@@ -790,6 +815,7 @@ th {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     margin-bottom: 60px;
+    white-space: normal;
   }
 }
 .news {
@@ -800,7 +826,7 @@ th {
   .news {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 60px;
   }
 }
 
@@ -886,7 +912,7 @@ th {
   .newslist__item {
     grid-template-columns: 2fr 1fr;
     gap: 60px;
-    max-width: 1120px;
+    max-width: 1300px;
   }
 }
 
@@ -913,7 +939,9 @@ th {
   .newslist {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    row-gap: 40px;
   }
 
   .newslist__grid {

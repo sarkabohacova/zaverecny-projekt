@@ -75,11 +75,6 @@ a {
   padding-right: 40px;
 }
 
-.header {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
 .infoboxes,
 .gallery,
 .regist__wrapper,
@@ -121,7 +116,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 90px);
+  min-height: calc(80vh - 90px);
   position: relative;
 }
 
@@ -209,20 +204,22 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: whitesmoke;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .header__logo {
-  max-width: 150px;
+  max-width: auto;
   padding: 20px 0;
-}
-@media screen and (min-width: 960px) {
-  .header__logo {
-    max-width: 200px;
-  }
 }
 
 .header__logo-home {
-  width: 100%;
+  width: 150px;
 }
 
 .menu__toggler {
@@ -236,7 +233,7 @@ a {
     font-size: 1.2rem;
   }
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1020px) {
   .menu__toggler {
     display: none;
   }
@@ -257,16 +254,21 @@ a {
   margin: 0;
   padding: 20px;
   list-style: none;
-  background-color: white;
+  background-color: whitesmoke;
   text-align: right;
   position: absolute;
   right: 0;
   z-index: 2;
+  width: 30vh;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1020px) {
   .menu__list {
     display: flex !important;
-    background-color: white;
+    background-color: whitesmoke;
+    position: relative;
+    align-items: center;
+    padding: 0;
+    width: auto;
   }
 }
 
@@ -274,7 +276,7 @@ a {
   border-bottom: 1px solid #52573d;
   padding: 15px;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1020px) {
   .menu__item {
     border-bottom: none;
   }
@@ -285,7 +287,7 @@ a {
   text-decoration: none;
   color: #52573d;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1020px) {
   .menu__link {
     position: relative;
   }
@@ -300,7 +302,11 @@ a {
   color: #eaa80b;
 }
 
-@media screen and (min-width: 960px) {
+.menu__link:active {
+  color: #eaa80b;
+}
+
+@media screen and (min-width: 1020px) {
   .menu__link:after {
     position: absolute;
     bottom: 0;
@@ -324,6 +330,14 @@ a {
 
   .menu__link:hover {
     color: #52573d;
+  }
+
+  .menu__link:active {
+    color: #52573d;
+  }
+
+  .menu__item--active .menu__link {
+    border-bottom: 1px solid #eaa80b;
   }
 }
 .divider {
@@ -399,10 +413,14 @@ a {
 .reference__box {
   background-color: white;
   border: 1px solid #eaa80b;
-  padding: 10px;
+  padding: 15px;
   max-width: 70vh;
   text-align: center;
   margin: 0 auto;
+}
+
+.reference__name {
+  opacity: 0.7;
 }
 
 .gallery {
@@ -542,6 +560,7 @@ a {
   table-layout: fixed;
   border-spacing: 0px;
   margin: 20px auto;
+  width: 100%;
 }
 
 .th,
@@ -633,14 +652,38 @@ th {
   padding-top: 1rem;
 }
 
+.faq__title {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 960px) {
   .faq {
     margin-bottom: 60px;
   }
 }
+.box__pic--left {
+  display: none;
+}
+@media screen and (min-width: 960px) {
+  .box__pic--left {
+    display: block;
+  }
+}
+
+.daisybox--contact {
+  margin-bottom: 60px;
+}
+
 .contact__heading {
   text-transform: uppercase;
-  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 960px) {
+  .contact__heading {
+    text-align: center;
+  }
 }
 
 .contact__flex {
@@ -659,6 +702,7 @@ th {
   padding-bottom: 56.25%;
   position: relative;
   height: 0;
+  margin-top: 60px;
 }
 
 .map-responsive iframe {
@@ -673,11 +717,74 @@ th {
   .contact {
     margin-bottom: 60px;
   }
+
+  .contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+.button--contact {
+  float: right;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.form {
+  border-radius: 5px;
+  background-color: #f3eddf;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 .box {
   margin-top: 60px;
   margin-bottom: 60px;
   text-align: center;
+}
+
+.box__title {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .box__title,
@@ -714,6 +821,12 @@ th {
   max-width: 600px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 960px) {
+  .box__img {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -758,6 +871,7 @@ th {
 
 .daisybox__text {
   margin: 0;
+  text-align: left;
 }
 
 .daisybox__title:before {
@@ -768,17 +882,9 @@ th {
   text-align: center;
 }
 
-.team__block {
-  margin: 40px 0;
-}
-@media screen and (min-width: 1060px) {
-  .team__block {
-    margin: 0 40px 0 0;
-  }
-}
-
 .team-block__title {
   margin: 5px 0 0 0;
+  display: block;
 }
 
 .team-block__title:before {
@@ -791,33 +897,39 @@ th {
 }
 
 .team__title {
-  margin-bottom: 0;
-}
-@media screen and (min-width: 1060px) {
-  .team__title {
-    margin-bottom: 40px;
-  }
+  margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .team-block__img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   border: 2px dotted #eaa80b;
   padding: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (max-width: 420px) {
+  .team-block__img {
+    width: 200px;
+    height: 200px;
+  }
+}
 
-@media screen and (min-width: 1060px) {
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media screen and (min-width: 960px) {
   .team__grid {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
     margin-bottom: 60px;
     white-space: normal;
   }
 }
+
 .news {
   text-align: center;
   margin-bottom: 60px;
@@ -871,6 +983,10 @@ th {
 
 .newslist {
   text-align: center;
+}
+
+.newslist__title {
+  margin-top: 0;
 }
 
 .newslist__heading {

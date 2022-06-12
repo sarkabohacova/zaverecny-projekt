@@ -378,7 +378,6 @@ a {
   border-radius: 5px;
   text-align: center;
   padding-bottom: 20px;
-  box-shadow: 5px 10px 18px #c1c2bb;
   cursor: pointer;
   transition: transform 0.3s;
   max-width: 600px;
@@ -411,7 +410,6 @@ a {
   background-size: cover;
   min-height: 50vh;
   padding: 20px;
-  box-shadow: 5px 10px 18px #c1c2bb;
   border-radius: 5px;
   margin-top: 60px;
   margin-bottom: 60px;
@@ -454,6 +452,10 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.gallery__item a:hover {
+  opacity: 0.7;
 }
 
 .gallery__item:nth-child(3n) {
@@ -550,7 +552,6 @@ a {
 
 .block__img {
   border-radius: 15px;
-  border: 2px dotted #eaa80b;
   padding: 5px;
   max-height: 700px;
   max-width: 600px;
@@ -827,7 +828,6 @@ label {
 
 .box__img {
   border-radius: 15px;
-  border: 2px dotted #eaa80b;
   padding: 5px;
   height: 100%;
   max-width: 600px;
@@ -917,7 +917,6 @@ label {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px dotted #eaa80b;
   padding: 10px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -956,7 +955,6 @@ label {
 
 .news__img {
   border-radius: 15px;
-  border: 2px dotted #eaa80b;
   padding: 5px;
   height: 100%;
   max-width: 600px;
@@ -1050,7 +1048,6 @@ label {
 
 .newslist__img {
   border-radius: 15px;
-  border: 2px dotted #eaa80b;
   padding: 5px;
   height: 100%;
   max-width: 300px;
